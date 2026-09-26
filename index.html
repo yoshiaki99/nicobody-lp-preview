@@ -352,8 +352,14 @@ ul,ol{margin:0;padding:0;list-style:none}
 .contact__card .btn{width:100%}
 .contact__tel{margin-top:10px;text-align:center;font-size:14px}
 .contact__tel a{font-size:22px;font-weight:900;text-decoration:none;letter-spacing:.04em}
-.pay{display:flex;flex-wrap:wrap;gap:8px}
-.pay li{background:var(--c-ivory);border-radius:var(--radius-pill);padding:4px 14px;font-size:14px;font-weight:700}
+.pay{margin:0;display:grid;gap:14px}
+.pay dt{font-size:14px;font-weight:700}
+.pay dd{margin:6px 0 0}
+.pay__cards{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:320px}
+.pay__cards li{height:60px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px}
+.pay__cards img{max-width:100%;max-height:38px;width:auto;height:auto;object-fit:contain}
+.pay__paypay{display:block;height:40px;width:auto}
+@media (min-width:768px){.pay__cards{grid-template-columns:repeat(4,1fr);max-width:600px}}
 
 /* ========== S13 ========== */
 .access{display:grid;gap:18px;margin-top:var(--stack-lg)}
@@ -819,9 +825,18 @@ ul,ol{margin:0;padding:0;list-style:none}
       </div>
       <div class="contact__card">
         <h3><span class="pill">お支払い</span>お支払い方法</h3>
-        <ul class="pay" data-placeholder="payment">
-          <li>現金</li><li>クレジットカード（VISA・Mastercard・JCB・AMEX）</li><li>PayPay</li>
-        </ul>
+        <dl class="pay">
+          <div class="pay__row"><dt>現金</dt></div>
+          <div class="pay__row"><dt>クレジットカード</dt>
+            <dd><ul class="pay__cards">
+              <li><img src="images/12_決済_Visa.png?v=20260926e" width="1000" height="324" alt="VISA" loading="lazy"></li>
+              <li><img src="images/12_決済_Mastercard.svg?v=20260926e" width="131" height="87" alt="Mastercard" loading="lazy"></li>
+              <li><img src="images/12_決済_JCB.webp?v=20260926e" width="134" height="103" alt="JCB" loading="lazy"></li>
+              <li><img src="images/12_決済_AMEX.webp?v=20260926e" width="93" height="93" alt="American Express" loading="lazy"></li>
+            </ul></dd></div>
+          <div class="pay__row"><dt>QRコード決済</dt>
+            <dd><img class="pay__paypay" src="images/12_決済_PayPay.png?v=20260926e" width="822" height="300" alt="PayPay" loading="lazy"></dd></div>
+        </dl>
       </div>
     </div>
   </div>
