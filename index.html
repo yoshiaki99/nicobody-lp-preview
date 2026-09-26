@@ -102,7 +102,7 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 p{margin:0}
 h1,h2,h3{margin:0;font-weight:700}
-h2,h3,.voice,.lead,.staff__lead,.s02__answer,.first__next,.ask p{word-break:auto-phrase;text-wrap:balance}
+h2,h3,.voice,.lead,.staff__lead,.s02__answer,.first__next{word-break:auto-phrase;text-wrap:balance}
 ul,ol{margin:0;padding:0;list-style:none}
 :focus-visible{outline:3px solid var(--c-green);outline-offset:3px;border-radius:4px}
 :where([id]){scroll-margin-top:84px}
@@ -324,12 +324,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 .howto{margin-top:var(--stack-lg);display:grid;gap:8px}
 .howto li{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:center;background:var(--c-white);border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.7}
 .howto li span{width:32px;height:32px;border-radius:50%;background:var(--c-leaf-tint);display:grid;place-items:center;font-weight:900}
-.cta-block{margin-top:var(--stack-lg)}
-.cta-block .btn--reserve{max-width:400px}
-.ask{margin-top:var(--stack-lg);background:var(--c-white);border-radius:var(--radius-card);padding:18px 20px}
-.ask p{font-size:14.5px;font-weight:700;text-align:center}
-.ask__btns{display:grid;gap:10px;margin-top:12px}
-@media (min-width:768px){.ask__btns{grid-template-columns:1fr 1fr}}
 
 /* ========== S11 FAQ (voice & reply) ========== */
 .faq{margin-top:var(--stack-lg);display:grid;gap:18px}
@@ -377,8 +371,6 @@ ul,ol{margin:0;padding:0;list-style:none}
 .closing{text-align:center;background:linear-gradient(180deg,var(--c-ivory),var(--c-peach-tint))}
 .closing__tag{max-width:420px;margin:0 auto}
 .closing__text{margin-top:var(--stack-lg);font-size:15.5px;line-height:2}
-.closing .btn--reserve{margin-top:var(--stack-lg)}
-.closing__sub{margin-top:14px}
 .cta-ask{margin-top:12px;text-align:center}
 .cta-ask__lead{font-size:13px;font-weight:700;color:var(--text-sub)}
 .cta-ask__btns{display:flex;justify-content:center;gap:8px;margin-top:6px;flex-wrap:wrap}
@@ -389,12 +381,18 @@ ul,ol{margin:0;padding:0;list-style:none}
 .tel-hours-inline{font-size:12.5px;color:var(--text-sub)}
 .btn--tel{flex-wrap:wrap}
 .btn--tel .tel-hours{flex-basis:100%;margin-top:1px}
-.contact__telbtn{margin-top:10px;width:100%}
 .fixbar__tel{flex-direction:column}
 .fixbar__tel small{display:block;font-size:10px;font-weight:700;letter-spacing:0;line-height:1.2}
 .header__telnum{display:flex;flex-direction:column;line-height:1.2}
 .header__telnum .tel-hours{font-size:10.5px;opacity:.8}
 @media (min-width:768px){.fv__sub .cta-ask{margin-top:0;display:flex;align-items:center;gap:10px}.fv__sub .cta-ask__btns{margin-top:0}}
+/* FV以外の共通CTA（予約ボタン＋LINE・電話） */
+.cta-unit{margin:var(--stack-lg) auto 0;max-width:440px;background:var(--c-white);border:1px solid var(--line);border-radius:var(--radius-card);padding:22px 18px 18px;text-align:center}
+.cta-unit .btn--reserve{max-width:none;margin:0}
+.cta-unit .cta-ask{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.cta-unit .cta-ask__btns{display:grid;grid-template-columns:1fr 1.7fr;gap:8px;margin-top:8px}
+.cta-unit .ask-link{padding:6px 10px;min-height:52px}
+.contact .cta-unit{margin-top:0;width:100%}
 
 /* ========== Footer ========== */
 .footer{background:var(--c-brown-deep);color:#fff;padding:36px 0 calc(var(--fixbar-h) + 36px + env(safe-area-inset-bottom));font-size:13px;line-height:1.9}
@@ -630,7 +628,7 @@ ul,ol{margin:0;padding:0;list-style:none}
         <p>施術のあいだ、保護者の方も同じ部屋にいられます。何をするかの説明も、一緒にお聞きください。<span data-placeholder="first-visit-rule">中高生の方の初回は、保護者の方の同伴、または同意をお願いしています。</span><span data-placeholder="oyako">親子で一緒に施術を受けることもできます。</span></p>
       </div>
     </div>
-    <div class="cta-block">
+    <div class="cta-unit">
       <a class="btn btn--reserve" href="#reserve" data-reserve data-placeholder="reserve-url">ネットで予約する<small>電話しなくても予約できます</small></a>
       <div class="cta-ask"><p class="cta-ask__lead">保護者の方のご質問も受け付けています</p><div class="cta-ask__btns"><a class="ask-link ask-link--line" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">LINE</a><a class="ask-link ask-link--tel" href="tel:07084340889"><span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a></div></div>
     </div>
@@ -743,18 +741,9 @@ ul,ol{margin:0;padding:0;list-style:none}
       <li><span>2</span>お名前と連絡先を入力</li>
       <li><span>3</span>予約完了。当日は気になっていることをお話しください</li>
     </ol>
-    <div class="cta-block">
+    <div class="cta-unit">
       <a class="btn btn--reserve" href="#reserve" data-reserve data-placeholder="reserve-url">ネットで予約する<small>電話しなくても予約できます</small></a>
-    </div>
-    <div class="ask">
-      <p>予約の前に聞いておきたいことは、<br>こちらから</p>
-      <div class="ask__btns">
-        <a class="btn btn--line btn--sub" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">
-          LINE</a>
-        <a class="btn btn--tel btn--sub" href="tel:07084340889">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z" fill="#fff"/></svg>
-          <span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a>
-      </div>
+      <div class="cta-ask"><p class="cta-ask__lead">予約の前に質問したい方は</p><div class="cta-ask__btns"><a class="ask-link ask-link--line" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">LINE</a><a class="ask-link ask-link--tel" href="tel:07084340889"><span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a></div></div>
     </div>
   </div>
 </section>
@@ -812,15 +801,9 @@ ul,ol{margin:0;padding:0;list-style:none}
       <h2 id="s12-title" class="h2">予約はネットで。<br>質問はLINEか電話で。</h2>
     </div>
     <div class="contact">
-      <div class="contact__card">
-        <h3><span class="pill">ご予約</span>ネット予約</h3>
+      <div class="cta-unit">
         <a class="btn btn--reserve" href="#reserve" data-reserve data-placeholder="reserve-url">ネットで予約する<small>電話しなくても予約できます</small></a>
-      </div>
-      <div class="contact__card">
-        <h3><span class="pill">お問い合わせ</span>LINE・電話</h3>
-        <a class="btn btn--line btn--sub" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">
-          LINE</a>
-        <a class="btn btn--tel btn--sub contact__telbtn" href="tel:07084340889"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z" fill="#fff"/></svg><span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a>
+        <div class="cta-ask"><p class="cta-ask__lead">予約の前に質問したい方は</p><div class="cta-ask__btns"><a class="ask-link ask-link--line" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">LINE</a><a class="ask-link ask-link--tel" href="tel:07084340889"><span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a></div></div>
       </div>
       <div class="contact__card">
         <h3><span class="pill">お支払い</span>お支払い方法</h3>
@@ -873,8 +856,10 @@ ul,ol{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <h2 id="s14-title" class="closing__tag"><img src="images/14_タグライン_手書き.png?v=20260926e" width="788" height="224" alt="からだが整うと、毎日がもっと、にこやかに。" loading="lazy"></h2>
     <p class="closing__text">先輩にすすめられた日。<br>写真の姿勢が気になった日。<br>試合が近づいてきた日。<br>気になったら、その週のうちに<br>予約ページをのぞいてみてください。</p>
-    <a class="btn btn--reserve" href="#reserve" data-reserve data-placeholder="reserve-url">ネットで予約する<small>電話しなくても予約できます</small></a>
-    <div class="closing__sub"><div class="cta-ask"><p class="cta-ask__lead">予約の前に質問したい方は</p><div class="cta-ask__btns"><a class="ask-link ask-link--line" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">LINE</a><a class="ask-link ask-link--tel" href="tel:07084340889"><span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a></div></div></div>
+    <div class="cta-unit">
+      <a class="btn btn--reserve" href="#reserve" data-reserve data-placeholder="reserve-url">ネットで予約する<small>電話しなくても予約できます</small></a>
+      <div class="cta-ask"><p class="cta-ask__lead">予約の前に質問したい方は</p><div class="cta-ask__btns"><a class="ask-link ask-link--line" href="https://lin.ee/SLoBf0S" target="_blank" rel="noopener">LINE</a><a class="ask-link ask-link--tel" href="tel:07084340889"><span>電話 070-8434-0889</span><small class="tel-hours">受付 9:00〜20:00・休業日なし</small></a></div></div>
+    </div>
   </div>
 </section>
 
