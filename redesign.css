@@ -152,7 +152,7 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
 
 /* Journey and room preview */
 .s07{background:#fffdf9}
-.steps{max-width:790px;margin-inline:auto;gap:12px}
+.steps{max-width:790px;margin-inline:auto;gap:12px;position:relative}
 .step{background:#fff9f3;border:1px solid #f1e5d7;border-radius:18px;padding:14px 20px 14px 16px;grid-template-columns:40px minmax(0,1fr) 180px;gap:12px;align-items:center;box-shadow:0 6px 17px rgba(83,45,22,.06)}
 .step:not(:last-child)::after{content:"";display:block;position:absolute;left:35px;top:58px;bottom:-30px;width:3px;border-radius:3px;background:#f3aa98;z-index:3}
 .step__num{width:40px;height:40px;background:#ff7566;color:#fff;box-shadow:0 3px 0 #ffd1c3}
@@ -162,6 +162,10 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
 .step__img{display:block;width:180px;height:135px;object-fit:contain;justify-self:end}
 .step:first-child{grid-template-columns:40px minmax(0,1fr) 150px}
 .step:first-child .step__img{width:150px;height:112px}
+@media (min-width:768px){
+  .steps::before{content:"";position:absolute;left:34px;top:69px;bottom:76px;width:3px;border-radius:3px;background:#f3aa98;z-index:3}
+  .step:not(:last-child)::after{display:none}
+}
 .dress{max-width:790px;margin:16px auto 0;background:#edf7e5;border:1px solid #dbeccf;border-radius:15px}
 .s08{background:#fff8ef}
 .gallery{gap:12px}
