@@ -148,16 +148,18 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
 .pricechip b{color:#f65d52}
 .s06__box{border:1px solid #eee3d7;border-radius:17px;box-shadow:0 7px 15px rgba(83,45,22,.05)}
 .s06__box h3 .pill{background:#e9f5df;color:#457b2a}
+.s06__price-note{text-align:center}
 
 /* Journey and room preview */
 .s07{background:#fffdf9}
 .steps{max-width:790px;margin-inline:auto;gap:12px}
-.step{background:#fff9f3;border:1px solid #f1e5d7;border-radius:18px;padding:18px 20px 18px 16px;grid-template-columns:40px 1fr;gap:12px;box-shadow:0 6px 17px rgba(83,45,22,.06)}
+.step{background:#fff9f3;border:1px solid #f1e5d7;border-radius:18px;padding:14px 20px 14px 16px;grid-template-columns:40px minmax(0,1fr) 150px;gap:12px;align-items:center;box-shadow:0 6px 17px rgba(83,45,22,.06)}
 .step:not(:last-child)::after{content:"";display:block;position:absolute;left:35px;top:58px;bottom:-30px;width:3px;border-radius:3px;background:#f3aa98;z-index:3}
 .step__num{width:40px;height:40px;background:#ff7566;color:#fff;box-shadow:0 3px 0 #ffd1c3}
 .step__num{position:relative;z-index:4}
 .step h3{padding:0;font-weight:900}
 .step p{margin-top:3px}
+.step__img{display:block;width:150px;height:112px;object-fit:contain;justify-self:end}
 .dress{max-width:790px;margin:16px auto 0;background:#edf7e5;border:1px solid #dbeccf;border-radius:15px}
 .s08{background:#fff8ef}
 .gallery{gap:12px}
@@ -172,6 +174,10 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
 .price__block h3{border:0;padding:0 0 0 14px;margin-bottom:12px;position:relative;font-weight:900}
 .price__block h3::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:5px;border-radius:5px;background:#ff7868}
 .price__block:nth-child(even) h3::before{background:#19a75a}
+.price__icon{display:block;width:34px;height:34px;object-fit:contain;flex:none;background:#fff8ef;border-radius:50%;padding:4px}
+.price__icons{display:flex;align-items:center;margin-right:2px}
+.price__icons .price__icon+ .price__icon{margin-left:-8px}
+.price__sub{white-space:nowrap}
 .price__row{border-bottom:1px solid #f2e8dd;padding:8px 0}
 .price__row dd{font-size:16px}
 .price__row--first dd{gap:2px}
@@ -219,6 +225,9 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
 .closing::before{left:-45px;right:auto;top:auto;bottom:20px;width:240px;height:210px;opacity:.12}
 .closing__tag{background:#fffdfa;padding:20px;border:1px solid #f7decf;border-radius:28px;box-shadow:0 12px 28px rgba(83,45,22,.09)}
 .closing__text{font-family:var(--font-voice);font-size:18px;font-weight:600}
+.closing__story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:24px;max-width:820px;margin:20px auto 0}
+.closing__story .closing__text{margin:0;text-align:center}
+.closing__img{display:block;width:100%;max-height:285px;object-fit:contain}
 .footer{background:#442c23}
 .footer__logo{background:#fffdf9}
 .fixbar{background:rgba(255,250,244,.97);border-color:#ead9cc;box-shadow:0 -5px 20px rgba(83,45,22,.12)}
@@ -233,7 +242,7 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
   .header__logo{width:auto;max-width:340px;margin-inline:auto}
   .header__logo img{max-height:68px;object-fit:contain}
   .fv__visual img{width:100%;aspect-ratio:4/5}
-  .fv__panel{margin:20px 16px 0;max-width:none;z-index:1}
+  .fv__panel{margin:-22px 16px 0;max-width:none;z-index:1}
   .fv-points{padding-inline:14px}
   .fv-points li{padding:12px 4px}
   .fv-points b{font-size:12px;white-space:normal}
@@ -252,10 +261,17 @@ body{background:var(--c-ivory);font-size:15px;line-height:1.82;letter-spacing:.0
   .svc h3{font-size:16px}
   .svc__price b{font-size:17px}
   .svc:nth-child(4){min-height:325px}
+  .s06__price-note{text-align:left}
+  .step{grid-template-columns:40px minmax(0,1fr);align-items:start}
+  .step__img{grid-column:2;width:min(100%,190px);height:124px;justify-self:center;margin-top:2px}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   .price__row dt{font-size:13.5px}
   .price__row dd{font-size:15px}
+  .price__sub{font-size:10px;padding-inline:6px;margin-left:0}
   .first{border-width:6px}
+  .closing__story{grid-template-columns:1fr;gap:8px;margin-top:24px}
+  .closing__img{max-height:250px}
+  .footer{padding-top:22px}
   .footer__logo{margin-inline:0!important;border-radius:14px!important;padding:10px!important}
 }
 @media (max-width:360px){
