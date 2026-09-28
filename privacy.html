@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>プライバシーポリシー｜NICO BODY（ニコボディ）</title>
+<meta name="description" content="NICO BODY（ニコボディ）のプライバシーポリシー。お客様の個人情報の取り扱いについて定めています。">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#FFFAF2">
+<!-- 公開前の確認用：検索結果に出さない設定。本番公開のときに削除する（公開前チェックリスト16） -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/favicon.png?v=20260926e">
+<link rel="apple-touch-icon" href="images/favicon.png?v=20260926e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   Tokens — LP本体（index.html + redesign.css）の値に合わせる
+   ========================================================= */
+:root{
+  --c-ivory:#FFFAF2;
+  --c-paper:#FFFDF9;
+  --c-peach:#FFD8C9;
+  --c-peach-logo:#FF7968;
+  --c-peach-tint:#FFF0E8;
+  --c-green:#79B65D;
+  --c-leaf-tint:#EFF7E8;
+  --c-brown-deep:#321914;
+  --c-footer:#442C23;
+
+  --text:var(--c-brown-deep);
+  --text-sub:#6D5B53;
+  --line:#EEE3D5;
+
+  --font-base:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  --gutter:22px;
+  --content-max:760px;
+  --radius-card:18px;
+  --shadow-card:0 8px 22px rgba(83,45,22,.07);
+}
+@media (min-width:768px){ :root{ --gutter:32px; } }
+
+/* ========== Base ========== */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--c-ivory);color:var(--text);font-family:var(--font-base);font-size:15px;line-height:1.9;letter-spacing:.03em;overflow-x:hidden}
+@media (min-width:768px){body{font-size:16px}}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-underline-offset:4px}
+p{margin:0}
+h1,h2{margin:0}
+h1,h2{word-break:auto-phrase;text-wrap:balance}
+:focus-visible{outline:3px solid var(--c-green);outline-offset:3px;border-radius:4px}
+:where([id]){scroll-margin-top:24px}
+.wrap{max-width:calc(var(--content-max) + var(--gutter)*2);margin:0 auto;padding:0 var(--gutter)}
+
+/* ========== Header ========== */
+.header{background:#fff;border-bottom:1px solid var(--line)}
+.header__in{max-width:1200px;margin:0 auto;padding:8px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.header__logo img{height:54px;width:auto}
+.header__back{font-size:14px;font-weight:700;white-space:nowrap}
+@media (max-width:767px){
+  .header__in{padding:4px 6px;display:block}
+  .header__logo img{width:100%;height:auto}
+  .header__back{display:none}
+}
+
+/* ========== Page title ========== */
+.pagehead{padding:44px 0 8px}
+.eyebrow{display:block;width:fit-content;font-size:12px;font-weight:700;letter-spacing:.12em;background:var(--c-leaf-tint);padding:2px 12px;border-radius:999px;margin-bottom:12px}
+.pagehead h1{position:relative;display:inline-block;font-size:clamp(26px,6vw,36px);font-weight:900;line-height:1.4;letter-spacing:.04em;padding-right:44px}
+.pagehead h1::after{content:"";position:absolute;right:0;bottom:.1em;width:36px;height:34px;background:url("images/16-leaf-single.png") center/contain no-repeat;transform:rotate(-12deg)}
+.pagehead__lead{margin-top:20px}
+.pagehead__date{margin-top:12px;font-size:13px;color:var(--text-sub)}
+
+/* ========== Contents (目次) ========== */
+.toc{margin-top:28px;background:var(--c-paper);border:1px solid var(--line);border-radius:var(--radius-card);padding:18px 20px}
+.toc__title{font-size:14px;font-weight:900;letter-spacing:.08em}
+.toc ol{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:2px 24px}
+@media (min-width:768px){.toc ol{grid-template-columns:1fr 1fr}}
+.toc a{display:flex;gap:10px;padding:5px 0;font-size:14px;line-height:1.6;text-decoration:none}
+.toc a:hover span:last-child{text-decoration:underline}
+.toc a span:first-child{flex:none;min-width:3.4em;color:var(--text-sub);font-weight:700}
+
+/* ========== Articles ========== */
+.policy{padding:28px 0 64px}
+.art{background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:24px 20px;margin-top:18px}
+@media (min-width:768px){.art{padding:32px 36px;margin-top:22px}}
+.art h2{position:relative;padding-left:18px;font-size:clamp(18px,4.4vw,21px);font-weight:900;line-height:1.5}
+.art h2::before{content:"";position:absolute;left:0;top:.15em;bottom:.15em;width:6px;border-radius:8px;background:var(--c-peach-logo)}
+.art:nth-of-type(even) h2::before{background:var(--c-green)}
+.art__no{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--text-sub);margin-bottom:2px}
+.art > p,.art > ol,.art > ul,.art > dl{margin-top:14px}
+
+/* 条文の番号：1. → (1) → ・ */
+.clauses,.clauses ol{list-style:none;padding:0;margin:0}
+.clauses{counter-reset:c1}
+.clauses > li{counter-increment:c1;position:relative;padding-left:1.9em}
+.clauses > li + li{margin-top:10px}
+.clauses > li::before{content:counter(c1) ".";position:absolute;left:0;top:0;font-weight:700}
+.clauses ol{counter-reset:c2;margin-top:8px}
+.clauses ol > li{counter-increment:c2;position:relative;padding-left:2.4em}
+.clauses ol > li + li{margin-top:6px}
+.clauses ol > li::before{content:"(" counter(c2) ")";position:absolute;left:0;top:0;font-weight:700}
+.clauses ol ol > li{padding-left:1.2em}
+.clauses ol ol > li::before{content:"・"}
+
+.dots{list-style:none;padding:0;margin:0}
+.dots li{position:relative;padding-left:1.2em}
+.dots li + li{margin-top:6px}
+.dots li::before{content:"";position:absolute;left:.2em;top:.8em;width:7px;height:7px;border-radius:50%;background:var(--c-peach-logo)}
+
+.note{font-size:13px;color:var(--text-sub);line-height:1.8}
+
+/* 窓口 */
+.desk{background:var(--c-peach-tint);border-radius:14px;padding:6px 18px}
+.desk div{display:grid;grid-template-columns:5.5em 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed #F3C0AA}
+.desk div:last-child{border-bottom:0}
+.desk dt{font-weight:700;font-size:14px}
+.desk dd{margin:0;font-size:15px}
+.desk small{display:block;font-size:13px;color:var(--text-sub)}
+@media (max-width:420px){.desk div{grid-template-columns:1fr;gap:0}}
+
+.end{margin-top:28px;text-align:right;font-weight:700}
+.back{margin-top:36px;text-align:center}
+.back a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:10px 28px;border-radius:999px;background:#fff;border:2px solid var(--c-brown-deep);font-weight:700;text-decoration:none;transition:background-color .15s ease}
+.back a:hover{background:var(--c-peach-tint)}
+
+/* ========== Footer ========== */
+.footer{background:var(--c-footer);color:#fff;padding:32px 0 calc(32px + env(safe-area-inset-bottom));font-size:13px;line-height:1.9}
+.footer a{color:#fff}
+.footer__info p + p{margin-top:2px}
+.footer small{display:block;margin-top:16px;opacity:.85}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__in">
+    <a class="header__logo" href="index.html"><img src="images/00-logo-header.png?v=20260926e" alt="NICO BODY ニコボディ 整体・スポーツケア・アロマ・リンパマッサージ トップページへ" width="886" height="200"></a>
+    <a class="header__back" href="index.html" data-close>閉じる</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow">個人情報の取り扱いについて</p>
+      <h1>プライバシーポリシー</h1>
+      <p class="pagehead__lead">NICO BODY（ニコボディ。以下「当店」といいます。）は、当店のウェブサイト（以下「本サイト」といいます。）および当店が提供する整体・スポーツケア・アロママッサージ・リンパマッサージなどのサービス（以下「本サービス」といいます。）における、お客様の個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
+      <p class="pagehead__date">2026年9月28日 制定</p>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <p class="toc__title" id="toc-title">目次</p>
+        <ol>
+          <li><a href="#art-1"><span>第1条</span><span>個人情報</span></a></li>
+          <li><a href="#art-2"><span>第2条</span><span>個人情報の収集方法</span></a></li>
+          <li><a href="#art-3"><span>第3条</span><span>個人情報を収集・利用する目的</span></a></li>
+          <li><a href="#art-4"><span>第4条</span><span>利用目的の変更</span></a></li>
+          <li><a href="#art-5"><span>第5条</span><span>個人情報の第三者提供</span></a></li>
+          <li><a href="#art-6"><span>第6条</span><span>外部サービスの利用</span></a></li>
+          <li><a href="#art-7"><span>第7条</span><span>個人情報の安全管理</span></a></li>
+          <li><a href="#art-8"><span>第8条</span><span>個人情報の開示</span></a></li>
+          <li><a href="#art-9"><span>第9条</span><span>個人情報の訂正および削除</span></a></li>
+          <li><a href="#art-10"><span>第10条</span><span>個人情報の利用停止等</span></a></li>
+          <li><a href="#art-11"><span>第11条</span><span>プライバシーポリシーの変更</span></a></li>
+          <li><a href="#art-12"><span>第12条</span><span>お問い合わせ窓口</span></a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <article class="policy">
+
+      <section class="art" id="art-1" aria-labelledby="art-1-h">
+        <h2 id="art-1-h"><span class="art__no">第1条</span>個人情報</h2>
+        <p>「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報、および容貌、指紋、声紋にかかるデータ、健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+      </section>
+
+      <section class="art" id="art-2" aria-labelledby="art-2-h">
+        <h2 id="art-2-h"><span class="art__no">第2条</span>個人情報の収集方法</h2>
+        <ol class="clauses">
+          <li>当店は、お客様がご予約・お問い合わせ・ご来店をされる際に、氏名、年齢（学年）、電話番号、メールアドレス、LINEのアカウント名などの個人情報をお尋ねすることがあります。</li>
+          <li>当店は、施術を安全に行うため、カウンセリングの際にお体の状態、けがや持病の有無、既往歴などをお伺いすることがあります。これらの情報は、お客様ご本人の同意を得たうえで取得し、施術の目的にのみ利用します。</li>
+          <li>中学生・高校生など未成年のお客様の個人情報は、保護者の方の同意を得たうえで取得します。</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-3" aria-labelledby="art-3-h">
+        <h2 id="art-3-h"><span class="art__no">第3条</span>個人情報を収集・利用する目的</h2>
+        <p>当店が個人情報を収集・利用する目的は、以下のとおりです。</p>
+        <ol class="clauses">
+          <li>ご予約の受付・管理、カウンセリング、施術など、本サービスを提供するため</li>
+          <li>お客様の状態に合わせた施術内容を検討し、施術の記録を管理するため</li>
+          <li>お客様からのお問い合わせに回答するため</li>
+          <li>ご予約の確認・変更、臨時休業のお知らせなど、必要に応じてご連絡するため</li>
+          <li>当店のサービスやキャンペーンのご案内をお送りするため</li>
+          <li>不正・不当な目的で本サービスを利用しようとする方を特定し、ご利用をお断りするため</li>
+          <li>施術料金のお支払いに関する手続きのため</li>
+          <li>上記の利用目的に付随する目的</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-4" aria-labelledby="art-4-h">
+        <h2 id="art-4-h"><span class="art__no">第4条</span>利用目的の変更</h2>
+        <ol class="clauses">
+          <li>当店は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。</li>
+          <li>利用目的の変更を行った場合には、変更後の目的について、当店所定の方法によりお客様に通知し、または本サイト上に公表するものとします。</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-5" aria-labelledby="art-5-h">
+        <h2 id="art-5-h"><span class="art__no">第5条</span>個人情報の第三者提供</h2>
+        <ol class="clauses">
+          <li>当店は、次に掲げる場合を除いて、あらかじめお客様の同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。
+            <ol>
+              <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+              <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+              <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+              <li>あらかじめ次の事項を告知あるいは公表し、かつ当店が個人情報保護委員会に届出をしたとき
+                <ol>
+                  <li>利用目的に第三者への提供を含むこと</li>
+                  <li>第三者に提供されるデータの項目</li>
+                  <li>第三者への提供の手段または方法</li>
+                  <li>本人の求めに応じて個人情報の第三者への提供を停止すること</li>
+                  <li>本人の求めを受け付ける方法</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>前項の定めにかかわらず、次に掲げる場合には、当該情報の提供先は第三者に該当しないものとします。
+            <ol>
+              <li>当店が利用目的の達成に必要な範囲内において個人情報の取り扱いの全部または一部を委託する場合</li>
+              <li>合併その他の事由による事業の承継に伴って個人情報が提供される場合</li>
+              <li>個人情報を特定の者との間で共同して利用する場合であって、その旨ならびに共同して利用される個人情報の項目、共同して利用する者の範囲、利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について、あらかじめ本人に通知し、または本人が容易に知り得る状態に置いた場合</li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-6" aria-labelledby="art-6-h">
+        <h2 id="art-6-h"><span class="art__no">第6条</span>外部サービスの利用</h2>
+        <p>本サイトでは、ご予約・お問い合わせ・地図の表示のために、次の外部サービスを利用しています。これらのサービス上でお客様が入力・送信された情報は、各サービス提供者のプライバシーポリシーに従って取り扱われます。</p>
+        <ul class="dots">
+          <li>LINE公式アカウント（LINEヤフー株式会社）：お問い合わせ・ご案内のため</li>
+          <li>TimeTree（株式会社TimeTree）：ネット予約のため</li>
+          <li>Googleマップ（Google LLC）：店舗の地図を表示するため</li>
+        </ul>
+      </section>
+
+      <section class="art" id="art-7" aria-labelledby="art-7-h">
+        <h2 id="art-7-h"><span class="art__no">第7条</span>個人情報の安全管理</h2>
+        <p>当店は、お預かりした個人情報を正確かつ最新の内容に保つよう努めるとともに、個人情報の漏えい、滅失またはき損の防止その他の安全管理のために、必要かつ適切な措置を講じます。利用目的を達成し不要となった個人情報は、適切な方法で廃棄・消去します。</p>
+      </section>
+
+      <section class="art" id="art-8" aria-labelledby="art-8-h">
+        <h2 id="art-8-h"><span class="art__no">第8条</span>個人情報の開示</h2>
+        <ol class="clauses">
+          <li>当店は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示します。ただし、開示することにより次のいずれかに該当する場合は、その全部または一部を開示しないこともあり、開示しない決定をした場合には、その旨を遅滞なく通知します。なお、個人情報の開示に際しては、1件あたり1,000円の手数料を申し受けます。
+            <ol>
+              <li>本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
+              <li>当店の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
+              <li>その他法令に違反することとなる場合</li>
+            </ol>
+          </li>
+          <li>前項の定めにかかわらず、履歴情報および特性情報などの個人情報以外の情報については、原則として開示いたしません。</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-9" aria-labelledby="art-9-h">
+        <h2 id="art-9-h"><span class="art__no">第9条</span>個人情報の訂正および削除</h2>
+        <ol class="clauses">
+          <li>お客様は、当店の保有する自己の個人情報が誤った情報である場合には、当店が定める手続きにより、当店に対して個人情報の訂正、追加または削除（以下「訂正等」といいます。）を請求することができます。</li>
+          <li>当店は、お客様から前項の請求を受けてその請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の訂正等を行うものとします。</li>
+          <li>当店は、前項の規定に基づき訂正等を行った場合、または訂正等を行わない旨の決定をしたときは、遅滞なく、これをお客様に通知します。</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-10" aria-labelledby="art-10-h">
+        <h2 id="art-10-h"><span class="art__no">第10条</span>個人情報の利用停止等</h2>
+        <ol class="clauses">
+          <li>当店は、本人から、個人情報が利用目的の範囲を超えて取り扱われているという理由、または不正の手段により取得されたものであるという理由により、その利用の停止または消去（以下「利用停止等」といいます。）を求められた場合には、遅滞なく必要な調査を行います。</li>
+          <li>前項の調査結果に基づき、その請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の利用停止等を行います。</li>
+          <li>当店は、前項の規定に基づき利用停止等を行った場合、または利用停止等を行わない旨の決定をしたときは、遅滞なく、これをお客様に通知します。</li>
+          <li>前2項にかかわらず、利用停止等に多額の費用を要する場合その他利用停止等を行うことが困難な場合であって、お客様の権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-11" aria-labelledby="art-11-h">
+        <h2 id="art-11-h"><span class="art__no">第11条</span>プライバシーポリシーの変更</h2>
+        <ol class="clauses">
+          <li>本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、お客様に通知することなく変更することができるものとします。</li>
+          <li>当店が別途定める場合を除いて、変更後のプライバシーポリシーは、本サイトに掲載したときから効力を生じるものとします。</li>
+        </ol>
+      </section>
+
+      <section class="art" id="art-12" aria-labelledby="art-12-h">
+        <h2 id="art-12-h"><span class="art__no">第12条</span>お問い合わせ窓口</h2>
+        <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。</p>
+        <dl class="desk">
+          <div><dt>所在地</dt><dd>〒190-0032<br>東京都立川市上砂町2-10-6</dd></div>
+          <div><dt>事業所名</dt><dd>NICO BODY（ニコボディ）</dd></div>
+          <div><dt>代表者</dt><dd>佐藤 靖丈</dd></div>
+          <div><dt>電話番号</dt><dd><a href="tel:07084340889">070-8434-0889</a><small>受付 9:00〜20:00・休業日なし</small></dd></div>
+          <div><dt>メール</dt><dd><a href="mailto:nicobody0716@gmail.com">nicobody0716@gmail.com</a></dd></div>
+        </dl>
+        <p class="end">以上</p>
+      </section>
+
+      <p class="back"><a href="index.html" data-close>閉じる</a></p>
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__info">
+      <p>NICO BODY（ニコボディ）｜整体・スポーツケア・アロマ・リンパマッサージ</p>
+      <p>〒190-0032 東京都立川市上砂町2-10-6</p>
+      <p>電話 <a href="tel:07084340889">070-8434-0889</a>（受付 9:00〜20:00・休業日なし）</p>
+    </div>
+    <small>&copy; NICO BODY</small>
+  </div>
+</footer>
+
+<script>
+/* 「閉じる」：LPから新しいウィンドウで開いたときはそのウィンドウを閉じる。
+   直接開いた場合など閉じられないときは、LPのトップページへ移動する。 */
+document.querySelectorAll('[data-close]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    window.close();
+    setTimeout(() => { if (!window.closed) location.href = a.getAttribute('href'); }, 300);
+  });
+});
+</script>
+
+</body>
+</html>
